@@ -9,7 +9,7 @@ function highestScore (students) {
         score : students[i].score,
       }
     }
-    if (students[i].score < max) {
+    if (students[i].score > max) {
       result[students[i].class].name = students[i].name
       result[students[i].class].score = students[i].score
     }
@@ -21,12 +21,12 @@ function highestScore (students) {
 console.log(highestScore([
   {
     name: 'Dimitri',
-    score: 80,
+    score: 90,
     class: 'foxes'
   },
   {
     name: 'Alexei',
-    score: 50,
+    score: 85,
     class: 'wolves'
   },
   {
@@ -36,8 +36,18 @@ console.log(highestScore([
   },
   {
     name: 'Anastasia',
+    score: 100,
+    class: 'wolves'
+  },
+  {
+    name: 'Robert',
     score: 110,
     class: 'wolves'
+  },
+  {
+    name: 'Bella',
+    score: 110,
+    class: 'foxes'
   }
 ]));
 
